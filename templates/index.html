@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Evaluation By AI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Resume Evaluation By AI</h1>
+      <p class="lead">Paste a resume and job description to get a match score and skill gaps.</p>
+    </header>
+
+    <div class="grid">
+      <div class="upload">
+        <label><strong>Upload Resume (PDF/DOCX)</strong></label>
+        <input id="resumeFile" type="file" accept=".pdf,.docx" />
+      </div>
+      <div class="upload">
+        <label><strong>Upload Job Description (PDF/DOCX)</strong></label>
+        <input id="jobFile" type="file" accept=".pdf,.docx" />
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <label for="resume"><strong>Resume Text</strong></label>
+        <textarea id="resume" placeholder="Paste resume text here..."></textarea>
+      </div>
+      <div>
+        <label for="job"><strong>Job Description</strong></label>
+        <textarea id="job" placeholder="Paste job description here..."></textarea>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="evaluateBtn">Evaluate</button>
+      <button id="clearBtn" type="button">Clear</button>
+      <span id="status" class="muted"></span>
+    </div>
+
+    <div id="result" class="panel" style="display:none;">
+      <div class="score" id="score">Score: --</div>
+      <p id="summary" class="muted"></p>
+      <div class="section-gap">
+        <strong>Overview of the Applicant</strong>
+        <ul class="overview" id="overviewList"></ul>
+      </div>
+      <div class="section-gap">
+        <strong>Strengths</strong>
+        <table class="table" id="strengthsTable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Argument</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="section-gap">
+        <strong>Weaknesses</strong>
+        <table class="table" id="weaknessesTable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Argument</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="section-gap">
+        <strong>Summary Recommendation</strong>
+        <p id="recommendation" class="muted"></p>
+      </div>
+      <div class="section-gap">
+        <strong>Strength Tags</strong>
+        <div id="strengths"></div>
+      </div>
+      <div class="section-gap">
+        <strong>Gap Tags</strong>
+        <div id="gaps"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
