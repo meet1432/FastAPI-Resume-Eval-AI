@@ -34,3 +34,7 @@ Open `http://localhost:7860` in your browser.
 - `POST /extract-text` - Extract text from PDF/DOCX
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+## LIVE TEST URL
+
+- 'https://meet1432-resume-evaluation-by-ai.hf.space/'
